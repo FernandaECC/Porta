@@ -35,6 +35,135 @@ class Porta:
 
 
 ganhou, perdeu = 0, 0
+    
+for i in range(10):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("10 jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(10):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("10 jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(100):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("100 jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(100):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("100 jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(200):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("200 jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(200):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("200 jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(500):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("500 jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(500):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("500 jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
 for i in range(1000):
     m = Porta()
     if m.run_game(mudar=True):
@@ -44,7 +173,7 @@ for i in range(1000):
 
 perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
 
-print("Um milhão de jogos (com mudanças):")
+print("1 mil jogos (com mudanças):")
 print("ganhou:", ganhou, "jogos")
 print("perdeu",perdeu, "jogos")
 print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
@@ -60,7 +189,166 @@ for i in range(1000):
 
 perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
 
-print("Um milhão de jogos (com porta original):")
+print("1 mil jogos (com porta original):")
 print("ganhou:", ganhou, "jogos")
 print("perdeu",perdeu, "jogos")
 print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(5000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("5 mil jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(5000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("5 mil jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(10000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("10 mil jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(10000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("10 mil jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+ganhou, perdeu = 0, 0
+    
+for i in range(50000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("50 mil jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(50000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("50 mil jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+ganhou, perdeu = 0, 0
+    
+for i in range(100000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("100 mil jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(100000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("100 mil jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
+ganhou, perdeu = 0, 0
+    
+for i in range(500000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("500 mil jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
+
+
+ganhou, perdeu = 0, 0
+for i in range(500000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
+
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
+
+print("500 mil jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
+
