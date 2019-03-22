@@ -1,104 +1,66 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+import random
+class Porta:
+    def __init__(self):
+        self.porta_premiada = self.escolhida_porta()
+        self.porta_selecionada = None
+        self.porta_removida = None
 
-# C extensions
-*.so
+    def escolhida_porta(self):
+        return random.randint(1,3)
+    
+    def porta_selecionar(self):
+        self.porta_selecionada = self.escolhida_porta()
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+    def porta_remover(self):
+        d = self.escolhida_porta()  
+        while d == self.porta_selecionada or d == self.porta_premiada:
+            d  = self.escolhida_porta()
+        self.porta_removida = d    
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+    def mudar_escolha(self):
+        self.porta_selecionada = 6 - self.porta_selecionada - self.porta_removida
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+    def ganha(self):
+        if self.porta_selecionada == self.porta_premiada:
+            return True
+        else:
+            return False
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
+    def run_game(self, mudar=True):
+        self.porta_selecionar()
+        self.porta_remover()
+        if mudar:
+            self.mudar_escolha() 
+        return self.ganha()
 
-# Translations
-*.mo
-*.pot
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
+ganhou, perdeu = 0, 0
+for i in range(1000):
+    m = Porta()
+    if m.run_game(mudar=True):
+        ganhou += 1
+    else:
+        perdeu += 1
 
-# Flask stuff:
-instance/
-.webassets-cache
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
 
-# Scrapy stuff:
-.scrapy
+print("Um milhão de jogos (com mudanças):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias" % perc_ganhou)
 
-# Sphinx documentation
-docs/_build/
 
-# PyBuilder
-target/
+ganhou, perdeu = 0, 0
+for i in range(1000):
+    m = Porta()
+    if m.run_game(mudar=False):
+        ganhou += 1
+    else:
+        perdeu += 1
 
-# Jupyter Notebook
-.ipynb_checkpoints
+perc_ganhou = 100.0*ganhou / (ganhou + perdeu)
 
-# pyenv
-.python-version
-
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
+print("Um milhão de jogos (com porta original):")
+print("ganhou:", ganhou, "jogos")
+print("perdeu",perdeu, "jogos")
+print("probabilidades: %2.f%% porcentagem de vitórias\n" % perc_ganhou)
